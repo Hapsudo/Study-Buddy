@@ -1,140 +1,145 @@
-🧠 StudyBuddy AI Pro – The Smartest Study Assistant for Kenyan Learners 🇰🇪
-StudyBuddy AI Pro is an AI-first, mobile-friendly web platform tailored for Kenyan students and parents. With real AI integrations, image-based homework recognition, voice-assisted queries, and M-Pesa-powered microtransactions, it makes learning personalized, accessible, and rewarding. Whether it’s a tough math equation, a science question, or an English grammar check — StudyBuddy delivers friendly, step-by-step support.
+# 🧠 StudyBuddy AI Pro – The Smartest Study Assistant for Kenyan Learners 🇰🇪
 
-🚀 Designed for impact. Built for scale. Tested by real parents and students.
+**StudyBuddy AI Pro** is an AI-first, mobile-optimized web platform tailored for **Kenyan students and parents**. Whether it's solving a tricky math problem, understanding a science topic, or translating an English grammar rule, **StudyBuddy delivers real-time, conversational learning**.
 
-📚 Table of Contents
-✨ Features
+With **photo recognition**, **voice-based queries**, **Swahili/English multilingual support**, and **M-Pesa-powered microtransactions**, it transforms education into an engaging, gamified experience.
 
-🛠️ Tech Stack
+> 🚀 *Designed for impact. Built for scale. Tested by real parents and learners.*
 
-🚀 Installation
+---
 
-📌 Usage
+## 📚 Table of Contents
 
-📁 File Structure
+- [✨ Features](#-features)  
+- [🛠️ Tech Stack](#-tech-stack)  
+- [🚀 Installation](#-installation)  
+- [📌 Usage](#-usage)  
+- [📁 File Structure](#-file-structure)  
+- [🧠 AI Integration](#-ai-integration)  
+- [💰 Payment Methods](#-payment-methods)  
+- [🎮 Gamification](#-gamification)  
+- [🤝 Contributing](#-contributing)  
+- [🪪 License](#-license)  
+- [📞 Contact](#-contact)  
 
-🧠 AI Integration
+---
 
-💰 Payment Methods
+## ✨ Features
 
-🎮 Gamification
+| Capability                | Description |
+|---------------------------|-------------|
+| 🎓 **AI Homework Assistant**  | Get instant, step-by-step explanations in Math, Science, English, and History. |
+| 📸 **Photo-to-Text (OCR)**     | Upload photos of handwritten/printed homework — StudyBuddy reads and solves them. |
+| 🗣️ **Voice Input**            | Ask questions via voice — helpful for young learners or those with accessibility needs. |
+| 🔊 **Text-to-Speech**         | AI reads answers aloud to support low-literacy environments. |
+| 📱 **Mobile-Optimized**       | Built to work well on low-end Android devices and tablets. |
+| 💳 **M-Pesa Integrated**      | Pay-per-question or subscribe — demo mode with M-Pesa, Airtel & card support. |
+| 🌍 **Multilingual**           | UI available in English & Swahili. |
+| 📊 **Confidence Scoring**     | Each answer shows confidence % and learning level. |
+| 🎮 **Study Quest**            | Earn points and badges for interaction — making education fun! |
+| 💼 **Investor Portal**        | Market insights, pitch deck, and growth charts for backers. |
 
-🤝 Contributing
+---
 
-🪪 License
+## 🛠️ Tech Stack
 
-📞 Contact
+| Layer         | Technology |
+|---------------|------------|
+| **Frontend**  | HTML5, CSS3, JavaScript (ES6+) |
+| **Styling**   | Tailwind-inspired utility classes + custom CSS |
+| **AI/OCR**    | Tesseract.js (OCR), OpenAI/xAI Grok API (demo mode) |
+| **Voice/Audio** | `webkitSpeechRecognition`, `speechSynthesis` |
+| **Backend (Demo)** | Node.js (local JSON APIs for mock flow) |
+| **Payments**  | M-Pesa & Airtel (simulated STK push & OTP) |
+| **Charts**    | Chart.js for dashboard analytics |
 
-✨ Features
-Capability	Description
-🎓 AI Homework Assistant	Get instant, easy-to-understand answers to Math, Science, English, and History questions.
-📸 Photo-to-Text	Upload images of handwritten or printed homework — AI extracts and explains!
-🗣️ Voice Input	Ask questions via voice for non-typing users.
-💬 Text-to-Speech	AI reads answers aloud, perfect for low-literacy or younger learners.
-📱 Mobile-Optimized	Fully responsive on low-end Android devices.
-💳 M-Pesa Integrated	Pay-per-question or subscribe monthly via M-Pesa. (Demo-ready)
-🌍 Multilingual Support	Switch between English and Swahili for inclusivity.
-🧠 AI Confidence Scoring	Every answer includes a confidence percentage and learning level.
-🧩 Study Quest Gamification	Earn points and badges for learning — education made fun!
-💼 Investor Portal	Includes pitch deck, market analysis, and demo for potential backers.
+---
 
-🛠️ Tech Stack
-Layer	Tech
-Frontend	HTML5, CSS3, JavaScript (ES6+)
-Styling	Custom CSS (Tailwind-inspired), gradients, animations
-AI Integration	OpenAI GPT-4 API (demo), Tesseract.js (OCR)
-Voice Tools	webkitSpeechRecognition & window.speechSynthesis
-Backend (Optional)	Node.js (simulated APIs for demo)
-Payments	M-Pesa demo integration, scalable to Flutterwave/Paystack
-Charts	Chart.js for student/usage analytics
+## 🚀 Installation
 
-🚀 Installation
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/studybuddy-ai-pro.git
 cd studybuddy-ai-pro
 npm install
-📄 Environment Setup
-Create a .env file in the root directory:
+📄 Environment Variables
+Create a .env file:
 
 env
 Copy
 Edit
 AI_API_KEY=your_openai_or_grok_key
-MPESA_API_KEY=your_mpesa_key
+MPESA_API_KEY=your_mpesa_sandbox_key
 🔄 Run Locally
 bash
 Copy
 Edit
 npm install -g http-server
 http-server . -p 8000
-Open your browser at: http://localhost:8000
+Visit: http://localhost:8000
 
-📌 Usage Overview
+📌 Usage
 🏠 Homepage
-Hero banner with bold CTA and AI stats.
+Logo + welcome title with animated background.
 
-Toggle between English/Swahili.
+Language switch (English/Swahili).
 
-Switch Dark/Light theme for readability.
+Dark/light mode toggle.
+
+AI feature buttons: Photo, Voice, M-Pesa.
 
 🤖 AI Chat Panel
-Select subject (Math, Science, English, History).
+Choose subject.
 
-Ask via text, voice, or photo upload.
+Ask via text, voice, or upload a photo.
 
-AI responds with confidence, learning level, and follow-up options.
+See AI responses with confidence score + follow-up hints.
 
 💸 Payment Demo
-Try M-Pesa, Airtel Money, or card.
+Try simulated M-Pesa, Airtel, or card payment.
 
-Simulated STK push and OTP flow for demo.
+Enter phone → fake STK → OTP confirmation → feedback modal.
 
 🎮 Study Quest
-Earn XP per interaction.
+Earn XP:
+
++10 points per question
+
++5 for positive feedback
 
 Unlock badges:
 
-Math Wizard – 50 pts
+🧠 Math Wizard – 50 pts
 
-Science Explorer – 100 pts
+🔬 Science Explorer – 100 pts
 
-Homework Hero – 250 pts
+🏆 Homework Hero – 250 pts
 
-Points saved with localStorage.
+Progress stored in localStorage.
 
 📊 Investor Dashboard
-Navigate to Investor Portal.
+Access pitch deck, demo stats, and funding CTA.
 
-View user growth charts, value prop, and download the pitch deck.
-
-Simulated OTP authentication enabled.
+OTP-protected modal with animated charts via Chart.js.
 
 📁 File Structure
 bash
 Copy
 Edit
 studybuddy-ai-pro/
-├── index.html              # Main entry
-├── style.css               # Custom mobile-first styles
-├── ai-script.js            # Core AI logic + UI interactions
-├── package.json            # Project metadata and scripts
-├── .env                    # API secrets (optional)
+├── index.html              # Main interface
+├── style.css               # Mobile-first custom styling
+├── ai-script.js            # AI logic, OCR, and interactivity
+├── package.json            # Metadata and dependencies
+├── .env                    # API keys and secrets (optional)
 ├── assets/
-│   ├── images/             # UI & feature illustrations
-│   └── icons/              # Subject & tech icons
-├── README.md               # You’re reading this file
+│   ├── images/             # Logos, mockups, illustrations
+│   └── icons/              # Subject icons & buttons
+├── README.md               # This file 📘
 🧠 AI Integration
-Demo Mode (Default)
-Simulates realistic AI answers with delay and confidence.
+🔁 Demo Mode (Default)
+Simulated responses from xAI/OpenAI with delay, 95% confidence, and sample text.
 
-Covers Math, Science, English, History.
-
-Live Mode (Optional)
-Update ai-script.js to connect to real APIs:
-
+☁️ Live Mode (Optional)
 js
 Copy
 Edit
@@ -145,54 +150,64 @@ const response = await fetch('https://api.x.ai/grok', {
   },
   body: JSON.stringify({ query: message })
 });
-🧪 OCR powered by Tesseract.js extracts text from photos for AI to interpret.
+🖼 OCR (Photo-to-Text)
+Uses Tesseract.js v4.0.2 to extract text.
+
+Extracted content appears in a preview modal for submission.
 
 💰 Payment Methods
-Demo Flow
-Enter phone number → Receive fake STK prompt → Get confirmation.
+💡 Demo Flow
+Enter fake phone → STK push simulated → OTP entry → success.
 
-Simulates M-Pesa, Airtel, and card options.
-
-Extend for Production:
-Replace in processPayment():
-
+🔐 Extend for Production
 js
 Copy
 Edit
 await fetch('https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest', {
   method: 'POST',
-  headers: { Authorization: `Bearer ${MPESA_API_KEY}` },
+  headers: {
+    Authorization: `Bearer ${process.env.MPESA_API_KEY}`
+  },
   ...
 });
-🎮 Gamification System
+Supports:
+
+M-Pesa
+
+Airtel Money
+
+Card (e.g., Stripe or Flutterwave)
+
+🎮 Gamification
 Action	Points
 Ask a question	+10
-Thumbs up ✅	+5
-Earn badge at milestones	50, 100, 250 pts
+Provide feedback	+5
+Earn badge (levels)	50/100/250 pts
 
-✅ Progress bar auto-updates
-✅ Badges animate in UI
-✅ Stored in localStorage for persistence
+XP bar updates in real time.
+
+Badges animate on unlock.
+
+Stored in browser via localStorage.
 
 🤝 Contributing
-Fork the repo
+Fork this repo
 
-Create a feature branch: git checkout -b feature/YourFeature
 
-Commit your changes: git commit -m 'Add feature'
-
-Push to GitHub: git push origin feature/YourFeature
-
-Submit a Pull Request
 
 🪪 License
-MIT License. See LICENSE for full terms.
+This project is licensed under the MIT License.
+See LICENSE for details.
 
 📞 Contact
 📧 Email: support@studybuddy.ai
 
-🐦 Twitter/X: @StudyBuddyAIPro
+🐦 Twitter: @StudyBuddyAIPro
 
-🌐 Website: https://studybuddy.ai
+🌐 Website: studybuddy.ai
 
-Built with ❤️ by Catherine Abugah, as part of Kenyan developers for Kenyan learners.
+💡 Built with ❤️ by Catherine Abugah – proudly supporting Kenyan learners with smart, accessible, and locally-relevant education solutions.
+
+
+✅ You can now **copy the entire block** above and paste it into your project’s `README.md` file.  
+Let me know if you'd like it zipped, converted to a PDF, or uploaded to GitHub for you!
