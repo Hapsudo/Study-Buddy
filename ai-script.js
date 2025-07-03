@@ -176,26 +176,49 @@ function submitOcrText() {
 }
 
 // Payment Demo
+// ...existing code...
+
 function showPaymentDemo(method = 'mpesa') {
     document.getElementById('paymentMethod').value = method;
-    showModal('paymentModal');
-}
-
-function processPayment() {
-    const phone = document.getElementById('paymentPhone').value;
-    const amount = document.getElementById('paymentAmount').value;
-    const method = document.getElementById('paymentMethod').value;
-
-    if (phone && amount) {
-        const notification = document.createElement('div');
-        notification.className = 'notification notification-success';
-        notification.textContent = `Payment of KES ${amount} via ${method} requested! (Demo Mode)`;
-        document.body.appendChild(notification);
-        setTimeout(() => notification.remove(), 3000);
-        closeModal('paymentModal');
+    // Update modal content based on method
+    let logo = '';
+    let label = '';
+    let placeholder = '';
+    let demoText = '';
+    if (method === 'mpesa') {
+        logo = 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=200';
+        label = 'Phone Number';
+        placeholder = '+254712345678';
+        demoText = 'Process a Payment (Demo Mode)';
+    } else if (method === 'airtel') {
+        logo = 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Airtel_logo.png';
+        label = 'Airtel Number';
+        placeholder = '+254735123456';
+        demoText = 'Airtel Money Payment (Demo)';
+    } else if (method === 'card') {
+        logo = 'https://cdn-icons-png.flaticon.com/512/633/633611.png';
+        label = 'Card Number';
+        placeholder = '1234 5678 9012 3456';
+        demoText = 'Bank Card Payment (Demo)';
     } else {
-        alert('Please enter a phone number and amount.');
+        // Default fallback
+        logo = 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=200';
+        label = 'Phone Number';
+        placeholder = '+254712345678';
+        demoText = 'Process a Payment (Demo Mode)';
     }
+
+    // Update DOM elements if they exist
+    const logoImg = document.querySelector('.mpesa-logo');
+    if (logoImg) logoImg.src = logo;
+    const headerH4 = document.querySelector('.mpesa-header h4');
+    if (headerH4) headerH4.textContent = demoText;
+    const phoneLabel = document.querySelector('label[for="paymentPhone"]');
+    if (phoneLabel) phoneLabel.textContent = label;
+    const phoneInput = document.getElementById('paymentPhone');
+    if (phoneInput) phoneInput.placeholder = placeholder;
+
+    showModal('paymentModal');
 }
 
 // Login and OTP

@@ -497,6 +497,11 @@
     <!-- Modals Container -->
     <div class="modals-container">
         <!-- Payment Modal -->
+         <div class="payment-method-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem;">
+          <button class="btn btn-primary" onclick="showPaymentDemo('mpesa')">M-Pesa</button>
+          <button class="btn btn-secondary" onclick="showPaymentDemo('airtel')">Airtel Money</button>
+          <button class="btn btn-outline" onclick="showPaymentDemo('card')">Bank Card</button>
+        </div>
         <div id="paymentModal" class="modal">
             <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="modal-header">
@@ -683,5 +688,34 @@
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="ai-script.js"></script>
+    <script>
+      // Hamburger menu toggle for mobile/small screens
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        // Close menu when clicking outside or on a link (optional)
+        function closeMenu() {
+          navLinks.classList.remove('active');
+        }
+        if (menuBtn && navLinks) {
+          menuBtn.addEventListener('click', function(e) {
+            navLinks.classList.toggle('active');
+            e.stopPropagation();
+          });
+          // Optional: close menu when a link is clicked (for better UX)
+          navLinks.querySelectorAll('a,button').forEach(el => {
+            el.addEventListener('click', closeMenu);
+          });
+          // Optional: close menu when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+              navLinks.classList.remove('active');
+            }
+          });
+        }
+      });
+    </script>
+</body>
+</html>
 </body>
 </html>
