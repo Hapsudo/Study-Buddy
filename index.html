@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyBuddy AI Pro - Real AI Homework Helper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA Tracking ID
+    </script>
+</head>
+<body>
+    <!-- Header Container -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <span>StudyBuddy AI Pro</span>
+                    <span class="beta-badge">LIVE AI</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link" onclick="showSection('demo-section')">Live Demo</a>
+                    <a href="#features" class="nav-link" onclick="showSection('ai-features-section')">AI Features</a>
+                    <a href="#pricing" class="nav-link" onclick="showSection('pricing-section')">Pricing</a>
+                    <a href="#dashboard" class="nav-link" onclick="showSection('dashboard-section')">School Dashboard</a>
+                    <button id="investorBtn" class="btn btn-primary" onclick="showModal('investorModal')">For Investors</button>
+                    <button id="loginBtn" class="btn btn-outline" onclick="showModal('loginModal')" aria-label="Open login modal">Login</button>
+                    <select id="languageSelector" class="language-selector" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="sw">Swahili</option>
+                    </select>
+                    <button id="themeToggle" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section Container -->
+            <section class="hero-section">
+                <div class="content-container">
+                    <div class="ai-badge" style="animation: float 3s ease-in-out infinite;">
+                        <span class="ai-icon">⚡</span>
+                        <span>Powered by Real AI Technology</span>
+                    </div>
+                    <h1 class="hero-title">The Future of Homework Help is Here</h1>
+                    <p class="hero-subtitle">Real AI integration, photo recognition, and M-Pesa payments. Built for Kenyan students and parents.</p>
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Kenyan students collaborating with laptops" class="hero-image" style="border-radius: 1rem; animation: fadeIn 1s ease-in;">
+                    <div class="hero-stats-container">
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">AI Power</span>
+                                <span class="stat-label">Advanced Explanations</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Vision AI</span>
+                                <span class="stat-label">Photo Recognition</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">M-Pesa</span>
+                                <span class="stat-label">Payment Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-buttons-container">
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary btn-large" onclick="showSection('demo-section')">
+                                🚀 Try Live AI Demo
+                            </button>
+                            <button class="btn btn-outline btn-large" onclick="showModal('investorModal')">
+                                💼 Investor Presentation
+                            </button>
+                            <button class="btn btn-secondary btn-large" onclick="showModal('tutorialModal')">
+                                🎓 Start Tutorial
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tech-stack-container">
+                        <div class="tech-stack">
+                            <div class="tech-item" style="animation: bounce 2s infinite;">
+                                <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="AI" class="tech-logo">
+                                <span>Advanced AI</span>
+                            </div>
+                            <div class="tech-item" style="animation: bounce 2s infinite 0.2s;">
+                                <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Google Vision" class="tech-logo">
+                                <span>Google Vision</span>
+                            </div>
+                            <div class="tech-item" style="animation: bounce 2s infinite 0.4s;">
+                                <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="M-Pesa" class="tech-logo">
+                                <span>M-Pesa API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Container -->
+            <div class="chat-container ai-enhanced">
+                <div class="content-container">
+                    <div class="chat-header">
+                        <div class="chat-status">
+                            <div class="ai-indicator">
+                                <div class="ai-pulse" style="animation: pulse 2s infinite;"></div>
+                                <span>🧠</span>
+                            </div>
+                            <div>
+                                <h3>StudyBuddy AI Pro</h3>
+                                <p>Advanced AI • Google Vision • M-Pesa Ready</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <div class="ai-mode-toggle">
+                                <span class="mode-label">AI Mode:</span>
+                                <select id="aiMode" onchange="switchAIMode()" style="padding: 0.25rem; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.1);">
+                                    <option value="demo">Demo Mode (Free)</option>
+                                    <option value="live">Live AI (Requires API)</option>
+                                </select>
+                            </div>
+                            <div class="grade-selector">
+                                <span class="mode-label">Grade Level:</span>
+                                <select id="gradeLevel" onchange="saveGradeLevel()" style="padding: 0.25rem; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.1);">
+                                    <option value="">Select Grade</option>
+                                    <option value="beginner">Beginner (Grade 1-4)</option>
+                                    <option value="intermediate">Intermediate (Grade 5-8)</option>
+                                    <option value="expert">Expert (KCSE/High School)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai">
+                            <div class="message-avatar ai-avatar">🤖</div>
+                            <div class="message-content">
+                                <div class="ai-thinking-indicator">
+                                    <span class="ai-brain">🧠</span>
+                                    <span>AI Processing...</span>
+                                </div>
+                                <div class="message-text">
+                                    Hello! I'm StudyBuddy AI Pro, your homework helper. I can:
+                                    <br><br>
+                                    <strong>🧠 Smart AI Features:</strong>
+                                    <br>• Solve complex homework
+                                    <br>• Read homework photos
+                                    <br>• Accept payments via M-Pesa
+                                    <br>• Provide step-by-step explanations
+                                    <br>• Support all subjects and grade levels
+                                    <br><br>
+                                    <strong>Try me with:</strong>
+                                    <br>• "Solve 2x + 5 = 15"
+                                    <br>• Upload a homework photo
+                                    <br>• "Explain photosynthesis"
+                                    <br><br>
+                                    <em>Currently in Demo Mode - Switch to Live AI for real responses!</em>
+                                </div>
+                                <div class="message-time">Just now</div>
+                                <div class="ai-confidence">
+                                    <span class="confidence-label">AI Confidence:</span>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" style="width: 95%"></div>
+                                    </div>
+                                    <span class="confidence-value">95%</span>
+                                </div>
+                                <div class="feedback-buttons">
+                                    <button class="quick-action-btn ai-btn" onclick="handleFeedback('positive', this)">✅ Got it</button>
+                                    <button class="quick-action-btn ai-btn" onclick="handleFeedback('negative', this)">❌ Still confused</button>
+                                    <button class="quick-action-btn ai-btn" onclick="speakText(this.closest('.message-content').querySelector('.message-text').textContent)">🔊 Read Aloud</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="study-quest-panel bg-green-100 p-4 rounded-lg mt-2">
+                        <h3 class="text-lg font-bold text-green-800">Study Quest</h3>
+                        <p class="text-sm text-green-600">Earn points and badges as you learn!</p>
+                        <div class="progress-bar bg-gray-200 h-4 rounded-full mt-2">
+                            <div id="questProgress" class="bg-green-500 h-4 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <p class="text-sm mt-1">Points: <span id="questPoints">0</span> | Next Badge: <span id="nextBadge">Math Wizard (50 pts)</span></p>
+                        <div id="questBadges" class="flex gap-2 mt-2"></div>
+                    </div>
+                    <div class="chat-input-area">
+                        <div class="ai-input-methods" style="flex-wrap: wrap; gap: 0.5rem; min-width: 100%;">
+                            <button class="input-method-btn active" onclick="switchInputMethod('text')" id="textMethodBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">💬</span>
+                                <div>
+                                    <div>Text Input</div>
+                                    <small>Type question</small>
+                                </div>
+                            </button>
+                            <button class="input-method-btn" onclick="switchInputMethod('photo')" id="photoMethodBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">📷</span>
+                                <div>
+                                    <div>AI Vision</div>
+                                    <small>Google Vision API</small>
+                                </div>
+                            </button>
+                            <button class="input-method-btn" onclick="switchInputMethod('voice')" id="voiceMethodBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">🎤</span>
+                                <div>
+                                    <div>Voice Input</div>
+                                    <small>Speech-to-text</small>
+                                </div>
+                            </button>
+                            <button class="input-method-btn" onclick="showPaymentDemo()" id="paymentBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">💳</span>
+                                <div>
+                                    <div>M-Pesa Pay</div>
+                                    <small>Demo payment</small>
+                                </div>
+                            </button>
+                            <button class="input-method-btn" onclick="showPaymentDemo('airtel')" id="airtelMethodBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">📱</span>
+                                <div>
+                                    <div>Airtel Money</div>
+                                    <small>Demo payment</small>
+                                </div>
+                            </button>
+                            <button class="input-method-btn" onclick="showPaymentDemo('card')" id="cardMethodBtn" style="min-width: 120px;">
+                                <span class="input-method-icon">💳</span>
+                                <div>
+                                    <div>Bank Card</div>
+                                    <small>Demo payment</small>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="file-upload-area ai-enhanced" id="fileUploadArea" style="padding: 1.5rem;">
+                            <div class="ai-vision-indicator">
+                                <span class="vision-icon">👁️</span>
+                                <span>Google Vision AI Ready</span>
+                            </div>
+                            <div class="file-upload-icon">📷</div>
+                            <div class="file-upload-text">
+                                <strong>AI Vision Analysis</strong><br>
+                                Upload homework photo for instant AI recognition
+                            </div>
+                            <input type="file" class="file-input" id="fileInput" accept="image/*">
+                            <button class="file-upload-btn ai-btn" onclick="document.getElementById('fileInput').click()">
+                                🤖 Analyze with AI Vision
+                            </button>
+                        </div>
+                        <div class="chat-input-container">
+                            <textarea 
+                                class="chat-input ai-enhanced" 
+                                id="chatInput" 
+                                placeholder="Ask me anything! Try: 'Solve 2x + 5 = 15' or 'Explain photosynthesis'"
+                                rows="2" 
+                                style="width: 100%; max-width: 100%;"
+                            ></textarea>
+                            <button class="send-btn ai-btn" onclick="sendAIMessage()" id="sendBtn">
+                                <span class="ai-send-icon">🧠</span>
+                            </button>
+                        </div>
+                        <div class="ai-typing-indicator" id="typingIndicator">
+                            <div class="ai-brain-animation">🧠</div>
+                            <span>AI is thinking deeply about your question</span>
+                            <div class="typing-dots">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                        </div>
+                        <div class="ai-quick-actions" style="flex-wrap: wrap; gap: 0.5rem;">
+                            <button class="quick-action-btn ai-btn" onclick="askAIQuestion('math')">
+                                🔢 AI Math Solver
+                            </button>
+                            <button class="quick-action-btn ai-btn" onclick="askAIQuestion('science')">
+                                🔬 AI Science Tutor
+                            </button>
+                            <button class="quick-action-btn ai-btn" onclick="askAIQuestion('english')">
+                                📚 AI Writing Helper
+                            </button>
+                            <button class="quick-action-btn ai-btn" onclick="showAICapabilities()">
+                                🤖 AI Capabilities
+                            </button>
+                            <button class="quick-action-btn ai-btn" onclick="viewPastQuestions()">
+                                📜 Past Questions
+                            </button>
+                        </div>
+                        <div class="suggested-questions" id="suggestedQuestions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Demo Section Container (Hidden by default) -->
+            <section id="demo-section" class="demo-section" style="display: none;">
+                <div class="content-container">
+                    <div class="demo-header">
+                        <h2>🤖 Live AI Demo</h2>
+                        <p>Experience real AI-powered homework help</p>
+                        <div class="demo-status">
+                            <div class="status-dot online" style="animation: pulse 1.5s infinite;"></div>
+                            <span>AI Systems Online</span>
+                        </div>
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2024/04/20/14/40/ai-generated-8708710_1280.jpg?auto=compress&cs=tinysrgb&w=800" alt="Student using AI interface" class="demo-image" style="border-radius: 1rem;">
+                    <div class="guided-mode-container">
+                        <div class="guided-mode">
+                            <h3>Guided Mode: Select Your Subject</h3>
+                            <select id="subjectSelector" onchange="loadSubjectPrompts()" style="padding: 0.5rem; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.1);">
+                                <option value="">Choose a subject</option>
+                                <option value="math">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="english">English</option>
+                                <option value="history">History</option>
+                            </select>
+                            <div id="subjectPrompts" class="subject-prompts"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Features Section Container (Hidden by default) -->
+            <section id="ai-features-section" class="ai-features-section" style="display: none;">
+                <div class="content-container">
+                    <h2 class="section-title">🤖 Real AI Technology Stack</h2>
+                    <div class="ai-features-grid">
+                        <div class="ai-feature-card primary" style="animation: slideIn 1s ease-out;">
+                            <div class="feature-header">
+                                <div class="feature-icon">🧠</div>
+                                <h3>Advanced AI Integration</h3>
+                                <div class="integration-status live">LIVE</div>
+                            </div>
+                            <p>Real AI for intelligent homework explanations. Not fake responses - actual AI reasoning.</p>
+                            <div class="feature-specs">
+                                <div class="spec">✅ Step-by-step solutions</div>
+                                <div class="spec">✅ Multi-subject expertise</div>
+                                <div class="spec">✅ Contextual understanding</div>
+                                <div class="spec">✅ Adaptive difficulty</div>
+                            </div>
+                            <div class="api-info">
+                                <span class="api-label">API Cost:</span>
+                                <span class="api-cost">$0.03/1K tokens</span>
+                            </div>
+                        </div>
+                        <div class="ai-feature-card secondary" style="animation: slideIn 1s ease-out 0.2s;">
+                            <div class="feature-header">
+                                <div class="feature-icon">👁️</div>
+                                <h3>Google Vision API</h3>
+                                <div class="integration-status live">LIVE</div>
+                            </div>
+                            <p>Advanced OCR and image analysis. Upload homework photos for instant AI processing.</p>
+                            <div class="feature-specs">
+                                <div class="spec">✅ Accurate text extraction</div>
+                                <div class="spec">✅ Image recognition</div>
+                                <div class="spec">✅ Multi-language support</div>
+                            </div>
+                            <div class="api-info">
+                                <span class="api-label">API Cost:</span>
+                                <span class="api-cost">$1.50/1K requests</span>
+                            </div>
+                        </div>
+                        <div class="ai-feature-card accent" style="animation: slideIn 1s ease-out 0.4s;">
+                            <div class="feature-header">
+                                <div class="feature-icon">💳</div>
+                                <h3>M-Pesa Payment Gateway</h3>
+                                <div class="integration-status ready">READY</div>
+                            </div>
+                            <p>Seamless payments via M-Pesa for premium features and subscriptions.</p>
+                            <div class="feature-specs">
+                                <div class="spec">✅ Secure transactions</div>
+                                <div class="spec">✅ Instant payment confirmation</div>
+                                <div class="spec">✅ Mobile money integration</div>
+                            </div>
+                            <div class="api-info">
+                                <span class="api-label">API Cost:</span>
+                                <span class="api-cost">Custom Pricing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Section Container (Hidden by default) -->
+            <section id="market-section" class="market-section" style="display: none;">
+                <div class="content-container">
+                    <h2 class="section-title">🌍 Market Opportunity in Kenya</h2>
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kenyan education market" class="market-image" style="border-radius: 1rem;">
+                    <p>Targeting 10M+ students with a growing demand for digital learning tools.</p>
+                    <div class="market-stats">
+                        <div class="market-stat">
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label">Students</span>
+                            <span class="stat-detail">Potential users in Kenya</span>
+                        </div>
+                        <div class="market-stat">
+                            <span class="stat-number">75%</span>
+                            <span class="stat-label">Mobile Penetration</span>
+                            <span class="stat-detail">High mobile usage rate</span>
+                        </div>
+                        <div class="market-stat">
+                            <span class="stat-number">KSH 500M</span>
+                            <span class="stat-label">Market Size</span>
+                            <span class="stat-detail">Estimated annual revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section Container (Hidden by default) -->
+            <section id="pricing-section" class="pricing-section" style="display: none;">
+                <div class="content-container">
+                    <div class="pricing-image-container">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pricing plans" class="pricing-image" style="border-radius: 1rem;">
+                    </div>
+                    <h2 class="pricing-title">💸 Affordable Pricing Plans</h2>
+                    <div class="pricing-grid">
+                        <div class="pricing-card" style="animation: fadeIn 1s ease-out;">
+                            <h3>Free Plan</h3>
+                            <div class="pricing-price">KSH 0</div>
+                            <div class="pricing-period">Per Month</div>
+                            <ul class="pricing-features">
+                                <li>✅ Basic AI Demo</li>
+                                <li>✅ Limited Questions</li>
+                                <li>❌ No Live AI</li>
+                                <li>❌ No Premium Features</li>
+                            </ul>
+                            <button class="btn btn-primary btn-full" onclick="showPaymentDemo()">Get Started</button>
+                        </div>
+                        <div class="pricing-card" style="animation: fadeIn 1s ease-out 0.2s;">
+                            <span class="popular-badge">Most Popular</span>
+                            <h3>Pro Plan</h3>
+                            <div class="pricing-price">KSH 500</div>
+                            <div class="pricing-period">Per Month</div>
+                            <ul class="pricing-features">
+                                <li>✅ Live AI Access</li>
+                                <li>✅ Unlimited Questions</li>
+                                <li>✅ Photo Recognition</li>
+                                <li>✅ M-Pesa Payments</li>
+                            </ul>
+                            <button class="btn btn-primary btn-full" onclick="showPaymentDemo()">Subscribe Now</button>
+                            <div class="revenue-projection">
+                                <div class="projection-item">Monthly Revenue<span>KSH 50,000</span></div>
+                                <div class="projection-item">Yearly Revenue<span>KSH 600,000</span></div>
+                            </div>
+                        </div>
+                        <div class="pricing-card" style="animation: fadeIn 1s ease-out 0.4s;">
+                            <h3>School Plan</h3>
+                            <div class="pricing-price">Custom</div>
+                            <div class="pricing-period">Per Year</div>
+                            <ul class="pricing-features">
+                                <li>✅ Bulk Licensing</li>
+                                <li>✅ Teacher Dashboard</li>
+                                <li>✅ Analytics Reports</li>
+                                <li>✅ Priority Support</li>
+                            </ul>
+                            <button class="btn btn-secondary btn-full" onclick="scheduleDemo()">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Section Container (Hidden by default) -->
+            <section id="dashboard-section" class="dashboard-section" style="display: none;">
+                <div class="content-container">
+                    <div class="dashboard-image-container">
+                        <img src="https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800" alt="School dashboard" class="dashboard-image" style="border-radius: 1rem;">
+                    </div>
+                    <h2 class="section-title">📊 School Dashboard</h2>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card" style="animation: slideIn 1s ease-out;">
+                            <h3>Student Progress</h3>
+                            <div class="dashboard-stats">
+                                <div class="stat-item">Questions Answered<span>1,200</span></div>
+                                <div class="stat-item">Average Score<span>85%</span></div>
+                                <div class="stat-item">Active Students<span>300</span></div>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="showAnalyticsCanvas()">View Analytics</button>
+                        </div>
+                        <div class="dashboard-card" style="animation: slideIn 1s ease-out 0.2s;">
+                            <h3>Teacher Tools</h3>
+                            <div class="dashboard-stats">
+                                <div class="stat-item">Assignments Created<span>150</span></div>
+                                <div class="stat-item">Feedback Given<span>500</span></div>
+                                <div class="stat-item">Reports Generated<span>30</span></div>
+                            </div>
+                            <button class="btn btn-secondary btn-full" onclick="downloadPitchDeck()">Download Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals Container -->
+    <div class="modals-container">
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">💳 Payment Demo</h3>
+                    <button class="close-btn" onclick="closeModal('paymentModal')" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body mpesa-demo" style="color: #e2e8f0;">
+                    <div class="mpesa-header">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=200" alt="M-Pesa Logo" class="mpesa-logo">
+                        <h4>Process a Payment (Demo Mode)</h4>
+                    </div>
+                    <form class="payment-form">
+                        <div class="form-group">
+                            <label for="paymentPhone" style="color: #e2e8f0;">Phone Number</label>
+                            <input type="tel" id="paymentPhone" class="form-input" placeholder="+254712345678" style="background: rgba(255, 255, 255, 0.2); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.3);">
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentAmount" style="color: #e2e8f0;">Amount (KSH)</label>
+                            <input type="number" id="paymentAmount" class="form-input" placeholder="500" style="background: rgba(255, 255, 255, 0.2); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.3);">
+                        </div>
+                        <input type="hidden" id="paymentMethod" value="mpesa">
+                        <button type="button" class="btn btn-primary btn-full" onclick="processPayment()" style="background: #4a5568; color: #e2e8f0; border: none;">Pay Now</button>
+                    </form>
+                    <div class="payment-flow">
+                        <div class="flow-step" style="color: #a0aec0;"><span class="step-number" style="color: #e2e8f0;">1</span><span>Enter phone and amount</span></div>
+                        <div class="flow-step" style="color: #a0aec0;"><span class="step-number" style="color: #e2e8f0;">2</span><span>Confirm payment via M-Pesa</span></div>
+                        <div class="flow-step" style="color: #a0aec0;"><span class="step-number" style="color: #e2e8f0;">3</span><span>Receive confirmation</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investor Modal -->
+        <div id="investorModal" class="modal">
+            <div class="modal-content investor-modal">
+                <div class="modal-header">
+                    <h3>💼 Investor Presentation</h3>
+                    <button class="close-btn" onclick="closeModal('investorModal')">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="investor-presentation">
+                        <div class="presentation-section">
+                            <h4>Problem Statement</h4>
+                            <ul>
+                                <li>Limited access to quality education in Kenya</li>
+                                <li>High cost of private tutors</li>
+                                <li>Need for personalized learning tools</li>
+                            </ul>
+                        </div>
+                        <div class="presentation-section">
+                            <h4>Solution</h4>
+                            <ul>
+                                <li>AI-powered homework helper</li>
+                                <li>Affordable and accessible via mobile</li>
+                                <li>Integrated with M-Pesa for payments</li>
+                            </ul>
+                        </div>
+                        <div class="presentation-section">
+                            <h4>Market Breakdown</h4>
+                            <div class="market-breakdown">
+                                <div class="market-item">Students<span>10M+</span></div>
+                                <div class="market-item">Annual Growth<span>5%</span></div>
+                                <div class="market-item">Total Market Value<span>KSH 500M</span></div>
+                            </div>
+                        </div>
+                        <div class="presentation-section">
+                            <h4>Funding Ask</h4>
+                            <div class="funding-breakdown">
+                                <div class="funding-item">Seed Round<span>$500K</span></div>
+                                <div class="funding-item">Use of Funds<span>Tech Development</span></div>
+                                <div class="funding-use">
+                                    <div>50% - AI Infrastructure</div>
+                                    <div>30% - Marketing</div>
+                                    <div>20% - Operations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-section">
+                        <button class="btn btn-primary btn-large" onclick="scheduleDemo()">Schedule a Demo</button>
+                        <button class="btn btn-secondary btn-large" onclick="downloadPitchDeck()">Download Pitch Deck</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OCR Preview Modal -->
+        <div id="ocrPreviewModal" class="modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">📷 OCR Preview</h3>
+                    <button class="close-btn" onclick="closeModal('ocrPreviewModal')" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body ocr-preview" style="color: #e2e8f0;">
+                    <textarea id="ocrText" class="form-input" rows="5" placeholder="Extracted text will appear here..." style="background: rgba(255, 255, 255, 0.2); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.3);"></textarea>
+                    <button class="btn btn-primary btn-full" onclick="submitOcrText()" style="background: #4a5568; color: #e2e8f0; border: none;">Submit to AI</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">🔒 Login</h3>
+                    <button class="close-btn" onclick="closeModal('loginModal')" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body login-form" style="color: #e2e8f0;">
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="loginPhone" style="color: #e2e8f0;">Phone Number</label>
+                            <input type="tel" id="loginPhone" class="form-input" placeholder="+254712345678" style="background: rgba(255, 255, 255, 0.2); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.3);">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full" onclick="processLogin()" id="sendOtpBtn">Send OTP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- OTP Modal -->
+        <div id="otpModal" class="modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">🔑 Verify OTP</h3>
+                    <button class="close-btn" onclick="closeModal('otpModal')" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body otp-form" style="color: #e2e8f0;">
+                    <p>Enter the OTP sent to your phone.</p>
+                    <input type="text" id="otpInput" class="form-input" placeholder="Enter 6-digit OTP" style="background: rgba(255, 255, 255, 0.2); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <button type="button" class="btn btn-primary btn-full" onclick="verifyOTP()" style="background: #4a5568; color: #e2e8f0; border: none;">Verify</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorial Modal -->
+        <div id="tutorialModal" class="modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">🎓 Welcome to StudyBuddy AI Pro</h3>
+                    <button class="close-btn" onclick="closeModal('tutorialModal')" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body" style="color: #e2e8f0;">
+                    <div id="tutorialSteps" class="tutorial-steps">
+                        <div class="tutorial-step active">
+                            <h4>Step 1: Ask a Question</h4>
+                            <p>Type your question in the text box or upload a photo.</p>
+                        </div>
+                        <div class="tutorial-step">
+                            <h4>Step 2: Get AI Response</h4>
+                            <p>Wait for the AI to process and provide an answer with confidence.</p>
+                        </div>
+                        <div class="tutorial-step">
+                            <h4>Step 3: Earn Points</h4>
+                            <p>Earn points and badges via the Study Quest panel!</p>
+                        </div>
+                    </div>
+                    <div class="tutorial-options">
+                        <button id="prevTutorialBtn" class="btn btn-outline" onclick="prevTutorialStep()" style="background: #2d3748; color: #e2e8f0; border: none;">Previous</button>
+                        <button id="nextTutorialBtn" class="btn btn-primary" onclick="nextTutorialStep()" style="background: #4a5568; color: #e2e8f0; border: none;">Next</button>
+                        <label>
+                            <input type="checkbox" id="showTutorial" onchange="toggleTutorialPreference()" style="margin-right: 0.5rem;"> Show on startup
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas Panel Modal -->
+        <div id="canvasPanel" class="modal canvas-modal">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.9)); border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div class="modal-header">
+                    <h3 style="color: #e2e8f0;">📊 Analytics Canvas</h3>
+                    <button class="close-btn" onclick="closeCanvasPanel()" style="color: #e2e8f0;">×</button>
+                </div>
+                <div class="modal-body" style="color: #e2e8f0;">
+                    <canvas id="analyticsChart" width="400" height="200"></canvas>
+                    <button class="btn btn-primary btn-full mt-2" onclick="downloadChart()" style="background: #4a5568; color: #e2e8f0; border: none;">Download Chart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="ai-script.js"></script>
+</body>
+</html>

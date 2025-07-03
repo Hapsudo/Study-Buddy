@@ -1,0 +1,28 @@
+// package.json
+{
+  "name": "studybuddy-ai-pro",
+  "version": "2.0.0",
+  "description": "AI-powered homework helper with real AI integration for Kenyan students",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx http-server -p 8000 -c-1",
+    "serve": "npx http-server -p 8000 -c-1"
+  },
+  "keywords": [
+    "ai",
+    "homework",
+    "education",
+    "parents",
+    "tutoring",
+    "openai",
+    "vision",
+    "mpesa",
+    "kenya",
+    "students"
+  ],
+  "author": "StudyBuddy Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
