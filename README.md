@@ -75,7 +75,7 @@ Copy
 Edit
 npm install -g http-server
 http-server . -p 8000
-Visit: [http://localhost:8000](https://study-buddy-aipro.netlify.app/#)
+Visit: https://study-buddy-aipro.netlify.app/#
 
 📌 Usage
 🏠 Homepage
