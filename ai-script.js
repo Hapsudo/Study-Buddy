@@ -1,3 +1,115 @@
+// --- TRANSLATIONS OBJECT ---
+const translations = {
+    en: {
+        navHome: 'Home',
+        navFeatures: 'AI Features',
+        navDashboard: 'School Dashboard',
+        navPricing: 'Pricing',
+        navInvestor: 'For Investors',
+        loginBtn: 'Login',
+        getStartedBtn: 'Get Started',
+        forInvestorsBtn: 'For Investors',
+        chatPlaceholder: 'Ask your homework question...',
+        subjectLabel: 'Select Subject',
+        modeLabel: 'AI Mode:',
+        gradeLabel: 'Grade:',
+        questHeader: 'Study Quest',
+        heroTitle: 'Welcome to StudyBuddy AI Pro!',
+        heroSubtitle: 'Explore our AI-powered features to get instant homework help, upload photos, use voice input, or pay seamlessly.',
+        photoBtn: 'Photo',
+        textBtn: 'Text',
+        voiceBtn: 'Voice',
+        mpesaBtn: 'M-Pesa',
+        airtelBtn: 'Airtel',
+        cardBtn: 'Card',
+        mathPrompts: ['Solve 2x + 5 = 15', 'What is the Pythagorean theorem?', 'Calculate the area of a circle with radius 7'],
+        sciencePrompts: ['Explain photosynthesis', "What is Newton's first law?", 'Describe the water cycle'],
+        englishPrompts: ['What is a metaphor?', 'Correct this sentence: She run fast.', 'Explain the plot of Romeo and Juliet'],
+        historyPrompts: ['What caused the World War I?', 'Who was Jomo Kenyatta?', 'Explain the Mau Mau uprising'],
+        paymentTitle: 'M-Pesa Payment Demo',
+        paymentHeader: 'Pay with M-Pesa, Airtel, or Card',
+        paymentDesc: 'Enter your details to proceed.',
+        paymentPhone: 'Phone Number',
+        paymentAmount: 'Amount (KES)',
+        paymentMethod: 'Payment Method',
+        paymentBtn: 'Pay Now',
+        paymentHow: 'How it Works',
+        paymentStep1: 'Enter phone number and amount',
+        paymentStep2: 'Receive OTP on your phone',
+        paymentStep3: 'Confirm payment',
+        ocrTitle: 'OCR Preview',
+        ocrExtracted: 'Extracted Text',
+        ocrBtn: 'Send to AI',
+        loginTitle: 'Login to StudyBuddy',
+        loginPhone: 'Phone Number',
+        loginBtnModal: 'Send OTP',
+        otpTitle: 'Enter OTP',
+        otpLabel: 'OTP Code',
+        otpBtn: 'Verify',
+        investorTitle: 'Investor Portal',
+        investorMarket: 'Market Opportunity',
+        investorFunding: 'Funding Needs',
+        investorDownload: 'Download Pitch Deck',
+        investorSchedule: 'Schedule a Demo',
+        analyticsTitle: 'Analytics Dashboard',
+        analyticsBtn: 'Download Chart'
+    },
+    sw: {
+        navHome: 'Nyumbani',
+        navFeatures: 'Vipengele vya AI',
+        navDashboard: 'Dashibodi ya Shule',
+        navPricing: 'Bei',
+        navInvestor: 'Kwa Wawekezaji',
+        loginBtn: 'Ingia',
+        getStartedBtn: 'Anza',
+        forInvestorsBtn: 'Kwa Wawekezaji',
+        chatPlaceholder: 'Uliza swali lako la kazi ya nyumbani...',
+        subjectLabel: 'Chagua Somo',
+        modeLabel: 'Hali ya AI:',
+        gradeLabel: 'Daraja:',
+        questHeader: 'Shindano la Kusoma',
+        heroTitle: 'Karibu kwa StudyBuddy AI Pro!',
+        heroSubtitle: 'Chunguza vipengele vyetu vya AI ili kupata msaada wa kazi za nyumbani mara moja, pakia picha, tumia ingizo la sauti, au lipia bila mshono.',
+        photoBtn: 'Picha',
+        textBtn: 'Andika',
+        voiceBtn: 'Sauti',
+        mpesaBtn: 'M-Pesa',
+        airtelBtn: 'Airtel',
+        cardBtn: 'Kadi',
+        mathPrompts: ['Tatua 2x + 5 = 15', 'Je, nadharia ya Pythagorean ni nini?', 'Hesabu eneo la duara lenye radius 7'],
+        sciencePrompts: ['Elezea fotosinthesis', 'Je, sheria ya kwanza ya Newton ni nini?', 'Elezea mzunguko wa maji'],
+        englishPrompts: ['Je, tashbihi ni nini?', 'Sahihisha sentensi hii: Yeye anakimbia haraka.', 'Elezea njama ya Romeo na Juliet'],
+        historyPrompts: ['Nini kilisababisha Vita vya Kwanza vya Dunia?', 'Jomo Kenyatta alikuwa nani?', 'Elezea maasi ya Mau Mau'],
+        paymentTitle: 'Demo ya Malipo ya M-Pesa',
+        paymentHeader: 'Lipa kwa M-Pesa, Airtel, au Kadi',
+        paymentDesc: 'Weka maelezo yako ili kuendelea.',
+        paymentPhone: 'Nambari ya Simu',
+        paymentAmount: 'Kiasi (KES)',
+        paymentMethod: 'Njia ya Malipo',
+        paymentBtn: 'Lipa Sasa',
+        paymentHow: 'Jinsi Inavyofanya Kazi',
+        paymentStep1: 'Weka nambari ya simu na kiasi',
+        paymentStep2: 'Pokea OTP kwenye simu yako',
+        paymentStep3: 'Thibitisha malipo',
+        ocrTitle: 'Muhtasari wa OCR',
+        ocrExtracted: 'Maandishi Yaliyotolewa',
+        ocrBtn: 'Tuma kwa AI',
+        loginTitle: 'Ingia kwa StudyBuddy',
+        loginPhone: 'Nambari ya Simu',
+        loginBtnModal: 'Tuma OTP',
+        otpTitle: 'Weka OTP',
+        otpLabel: 'Msimbo wa OTP',
+        otpBtn: 'Thibitisha',
+        investorTitle: 'Lango la Wawekezaji',
+        investorMarket: 'Fursa ya Soko',
+        investorFunding: 'Mahitaji ya Ufadhili',
+        investorDownload: 'Pakua Pitch Deck',
+        investorSchedule: 'Panga Demo',
+        analyticsTitle: 'Dashibodi ya Takwimu',
+        analyticsBtn: 'Pakua Chati'
+    }
+};
+
 function showModal(modalId) {
     document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('active'));
     console.log('Opening modal:', modalId);
@@ -59,7 +171,7 @@ function loadSubjectPrompts() {
 
     const prompts = {
         math: ['Solve 2x + 5 = 15', 'What is the Pythagorean theorem?', 'Calculate the area of a circle with radius 7'],
-        science: ['Explain photosynthesis', 'What is Newton’s first law?', 'Describe the water cycle'],
+        science: ['Explain photosynthesis', "What is Newton's first law?", 'Describe the water cycle'],
         english: ['What is a metaphor?', 'Correct this sentence: She run fast.', 'Explain the plot of Romeo and Juliet'],
         history: ['What caused the World War I?', 'Who was Jomo Kenyatta?', 'Explain the Mau Mau uprising']
     };
@@ -92,6 +204,7 @@ function saveGradeLevel() {
 }
 
 async function sendAIMessage() {
+    console.log('sendAIMessage called');
     const input = document.getElementById('chatInput');
     const messageText = input.value.trim();
     if (!messageText) return;
@@ -191,6 +304,7 @@ async function processPayment() {
 }
 
 function processLogin() {
+    console.log('processLogin called');
     const phone = document.getElementById('loginPhone').value;
     if (!phone) {
         showNotification('Please enter a phone number.', 'error');
@@ -310,7 +424,7 @@ function updateQuestPoints(points) {
 }
 
 function provideFeedback(isHelpful) {
-    showNotification(isHelpful ? 'Thanks for your feedback!' : 'Sorry, we’ll improve!', 'success');
+    showNotification(isHelpful ? 'Thanks for your feedback!' : 'Sorry, we will improve!', 'success');
     if (isHelpful) {
         updateQuestPoints(5);
     }
@@ -349,73 +463,17 @@ function downloadChart() {
 }
 
 function changeLanguage() {
+    console.log('changeLanguage called');
     const lang = document.getElementById('languageSelector').value;
-    console.log('Language changed to:', lang);
-
-    const translations = {
-        en: {
-            navHome: 'Home',
-            navFeatures: 'AI Features',
-            navDashboard: 'School Dashboard',
-            navPricing: 'Pricing',
-            navInvestor: 'For Investors',
-            loginBtn: 'Login',
-            getStartedBtn: 'Get Started',
-            forInvestorsBtn: 'For Investors',
-            chatPlaceholder: 'Ask your homework question...',
-            subjectLabel: 'Select Subject',
-            modeLabel: 'AI Mode:',
-            gradeLabel: 'Grade:',
-            questHeader: 'Study Quest',
-            heroTitle: 'Welcome to StudyBuddy AI Pro!',
-            heroSubtitle: 'Explore our AI-powered features to get instant homework help, upload photos, use voice input, or pay seamlessly.',
-            photoBtn: 'Photo',
-            voiceBtn: 'Voice',
-            mpesaBtn: 'M-Pesa',
-            airtelBtn: 'Airtel',
-            cardBtn: 'Card',
-            mathPrompts: ['Solve 2x + 5 = 15', 'What is the Pythagorean theorem?', 'Calculate the area of a circle with radius 7'],
-            sciencePrompts: ['Explain photosynthesis', 'What is Newton’s first law?', 'Describe the water cycle'],
-            englishPrompts: ['What is a metaphor?', 'Correct this sentence: She run fast.', 'Explain the plot of Romeo and Juliet'],
-            historyPrompts: ['What caused the World War I?', 'Who was Jomo Kenyatta?', 'Explain the Mau Mau uprising']
-        },
-        sw: {
-            navHome: 'Nyumbani',
-            navFeatures: 'Vipengele vya AI',
-            navDashboard: 'Dashibodi ya Shule',
-            navPricing: 'Bei',
-            navInvestor: 'Kwa Wawekezaji',
-            loginBtn: 'Ingia',
-            getStartedBtn: 'Anza',
-            forInvestorsBtn: 'Kwa Wawekezaji',
-            chatPlaceholder: 'Uliza swali lako la kazi ya nyumbani...',
-            subjectLabel: 'Chagua Somo',
-            modeLabel: 'Hali ya AI:',
-            gradeLabel: 'Daraja:',
-            questHeader: 'Shindano la Kusoma',
-            heroTitle: 'Karibu kwa StudyBuddy AI Pro!',
-            heroSubtitle: 'Chunguza vipengele vyetu vya AI ili kupata msaada wa kazi za nyumbani mara moja, pakia picha, tumia ingizo la sauti, au lipia bila mshono.',
-            photoBtn: 'Picha',
-            voiceBtn: 'Sauti',
-            mpesaBtn: 'M-Pesa',
-            airtelBtn: 'Airtel',
-            cardBtn: 'Kadi',
-            mathPrompts: ['Tatua 2x + 5 = 15', 'Je, nadharia ya Pythagorean ni nini?', 'Hesabu eneo la duara lenye radius 7'],
-            sciencePrompts: ['Elezea fotosinthesis', 'Je, sheria ya kwanza ya Newton ni nini?', 'Elezea mzunguko wa maji'],
-            englishPrompts: ['Je, tashbihi ni nini?', 'Sahihisha sentensi hii: Yeye anakimbia haraka.', 'Elezea njama ya Romeo na Juliet'],
-            historyPrompts: ['Nini kilisababisha Vita vya Kwanza vya Dunia?', 'Jomo Kenyatta alikuwa nani?', 'Elezea maasi ya Mau Mau']
-        }
-    };
-
     const t = translations[lang];
-    document.querySelector('.nav-link[onclick="showSection(\'main\')]').textContent = t.navHome;
-    document.querySelector('.nav-link[onclick="showSection(\'ai-features-section\')]').textContent = t.navFeatures;
-    document.querySelector('.nav-link[onclick="showSection(\'dashboard-section\')]').textContent = t.navDashboard;
-    document.querySelector('.nav-link[onclick="showSection(\'pricing-section\')]').textContent = t.navPricing;
-    document.querySelector('.nav-link[onclick="showModal(\'investorModal\')]').textContent = t.navInvestor;
+    document.getElementById('navHome').textContent = t.navHome;
+    document.getElementById('navFeatures').textContent = t.navFeatures;
+    document.getElementById('navDashboard').textContent = t.navDashboard;
+    document.getElementById('navPricing').textContent = t.navPricing;
+    document.getElementById('navInvestor').textContent = t.navInvestor;
     document.getElementById('loginBtn').textContent = t.loginBtn;
-    document.querySelector('.btn[onclick="showModal(\'tutorialModal\')]').textContent = t.getStartedBtn;
-    document.querySelector('.btn[onclick="showModal(\'investorModal\')]').textContent = t.forInvestorsBtn;
+    document.getElementById('getStartedBtn').textContent = t.getStartedBtn;
+    document.getElementById('forInvestorsBtn').textContent = t.forInvestorsBtn;
     document.getElementById('chatInput').placeholder = t.chatPlaceholder;
     document.querySelector('label[for="subjectSelector"]').textContent = t.subjectLabel;
     document.querySelector('label[for="aiMode"]').textContent = t.modeLabel;
@@ -423,12 +481,32 @@ function changeLanguage() {
     document.querySelector('.study-quest-panel h3').textContent = t.questHeader;
     document.getElementById('heroTitle').textContent = t.heroTitle;
     document.getElementById('heroSubtitle').textContent = t.heroSubtitle;
-    document.querySelector('#welcomePhotoMethodBtn .input-method-text').textContent = t.photoBtn;
-    document.querySelector('#welcomeVoiceMethodBtn .input-method-text').textContent = t.voiceBtn;
-    document.querySelector('#welcomeMpesaMethodBtn .input-method-text').textContent = t.mpesaBtn;
-    document.querySelector('#welcomeAirtelMethodBtn .input-method-text').textContent = t.airtelBtn;
-    document.querySelector('#welcomeCardMethodBtn .input-method-text').textContent = t.cardBtn;
-
+    document.getElementById('textMethodBtn').innerHTML = `<span class="input-method-icon">📝</span>${t.textBtn}`;
+    document.getElementById('photoMethodBtn').innerHTML = `<span class="input-method-icon">📸</span>${t.photoBtn}`;
+    document.getElementById('voiceMethodBtn').innerHTML = `<span class="input-method-icon">🎤</span>${t.voiceBtn}`;
+    document.getElementById('paymentMethodBtn').innerHTML = `<span class="input-method-icon">💸</span>${t.mpesaBtn}`;
+    document.getElementById('airtelMethodBtn').innerHTML = `<span class="input-method-icon">💳</span>${t.airtelBtn}`;
+    document.getElementById('cardMethodBtn').innerHTML = `<span class="input-method-icon">💳</span>${t.cardBtn}`;
+    document.getElementById('paymentModalTitle').textContent = t.paymentTitle;
+    document.getElementById('paymentModalHeader').textContent = t.paymentHeader;
+    document.getElementById('paymentModalDesc').textContent = t.paymentDesc;
+    document.getElementById('paymentHowTitle').textContent = t.paymentHow;
+    document.getElementById('ocrPreviewTitle').textContent = t.ocrTitle;
+    document.getElementById('ocrExtractedTitle').textContent = t.ocrExtracted;
+    document.getElementById('ocrSendBtn').textContent = t.ocrBtn;
+    document.getElementById('loginModalTitle').textContent = t.loginTitle;
+    document.getElementById('loginPhoneLabel').textContent = t.loginPhone;
+    document.getElementById('sendOtpBtn').textContent = t.loginBtnModal;
+    document.getElementById('otpModalTitle').textContent = t.otpTitle;
+    document.getElementById('otpInputLabel').textContent = t.otpLabel;
+    document.getElementById('otpModalTitle').textContent = t.otpTitle;
+    document.getElementById('investorModalTitle').textContent = t.investorTitle;
+    document.getElementById('investorMarketTitle').textContent = t.investorMarket;
+    document.getElementById('investorFundingTitle').textContent = t.investorFunding;
+    document.getElementById('investorDownloadBtn').textContent = t.investorDownload;
+    document.getElementById('investorScheduleBtn').textContent = t.investorSchedule;
+    document.getElementById('analyticsTitle').textContent = t.analyticsTitle;
+    document.getElementById('analyticsDownloadBtn').textContent = t.analyticsBtn;
     const subject = document.getElementById('subjectSelector').value;
     const promptsDiv = document.getElementById('subjectPrompts');
     promptsDiv.innerHTML = '';
@@ -470,3 +548,63 @@ document.addEventListener('DOMContentLoaded', () => {
     showSection('main');
     changeLanguage(); // Initialize language
 });
+
+if (document.getElementById('fileInput') && document.querySelector('.file-upload-btn')) {
+    document.querySelector('.file-upload-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('fileInput').click();
+    });
+}
+
+// --- VOICE INPUT ---
+function startVoiceInput() {
+    if (!('webkitSpeechRecognition' in window)) {
+        showNotification('Voice recognition not supported in this browser.', 'error');
+        return;
+    }
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = document.getElementById('languageSelector').value === 'sw' ? 'sw-KE' : 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        document.getElementById('chatInput').value = transcript;
+    };
+    recognition.onerror = function(event) {
+        showNotification('Voice input error: ' + event.error, 'error');
+    };
+    recognition.start();
+}
+
+// Attach to the voice button
+document.getElementById('voiceMethodBtn').addEventListener('click', startVoiceInput);
+
+// --- ENSURE GLOBAL ACCESS ---
+window.changeLanguage = changeLanguage;
+window.sendAIMessage = sendAIMessage;
+window.submitOcrText = submitOcrText;
+window.startVoiceInput = startVoiceInput;
+window.showModal = showModal;
+window.closeModal = closeModal;
+window.showSection = showSection;
+window.switchInputMethod = switchInputMethod;
+window.switchAIMode = switchAIMode;
+window.saveGradeLevel = saveGradeLevel;
+window.askAIQuestion = askAIQuestion;
+window.showAICapabilities = showAICapabilities;
+window.viewPastQuestions = viewPastQuestions;
+window.showPaymentDemo = showPaymentDemo;
+window.processPayment = processPayment;
+window.processLogin = processLogin;
+window.verifyOTP = verifyOTP;
+window.showNotification = showNotification;
+window.toggleTutorialPreference = toggleTutorialPreference;
+window.nextTutorialStep = nextTutorialStep;
+window.prevTutorialStep = prevTutorialStep;
+window.downloadPitchDeck = downloadPitchDeck;
+window.scheduleDemo = scheduleDemo;
+window.closeCanvasPanel = closeCanvasPanel;
+window.updateQuestPoints = updateQuestPoints;
+window.provideFeedback = provideFeedback;
+window.initializeAnalyticsChart = initializeAnalyticsChart;
+window.downloadChart = downloadChart;

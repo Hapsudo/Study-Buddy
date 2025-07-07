@@ -17,11 +17,11 @@
                 <span class="beta-badge">Beta</span>
             </a>
             <div class="nav-links">
-                <a href="#" class="nav-link" onclick="showSection('main')">Home</a>
-                <a href="#" class="nav-link" onclick="showSection('ai-features-section')">AI Features</a>
-                <a href="#" class="nav-link" onclick="showSection('dashboard-section')">School Dashboard</a>
-                <a href="#" class="nav-link" onclick="showSection('pricing-section')">Pricing</a>
-                <a href="#" class="nav-link" id="investorBtn" onclick="showModal('investorModal')">For Investors</a>
+                <a href="#" class="nav-link" id="navHome" onclick="showSection('main')">Home</a>
+                <a href="#" class="nav-link" id="navFeatures" onclick="showSection('ai-features-section')">AI Features</a>
+                <a href="#" class="nav-link" id="navDashboard" onclick="showSection('dashboard-section')">School Dashboard</a>
+                <a href="#" class="nav-link" id="navPricing" onclick="showSection('pricing-section')">Pricing</a>
+                <a href="#" class="nav-link" id="navInvestor" onclick="showModal('investorModal')">For Investors</a>
                 <select id="languageSelector" class="language-selector" onchange="changeLanguage()">
                     <option value="en">English</option>
                     <option value="sw">Swahili</option>
@@ -407,15 +407,16 @@
     <div id="paymentModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>M-Pesa Payment Demo</h3>
+                <h3 id="paymentModalTitle">M-Pesa Payment Demo</h3>
+                <h4 id="paymentModalHeader">Pay with M-Pesa, Airtel, or Card</h4>
+                <p id="paymentModalDesc">Enter your details to proceed.</p>
                 <button class="close-btn" onclick="closeModal('paymentModal')">×</button>
             </div>
             <div class="modal-body">
                 <div class="mpesa-demo">
                     <img src="assets/images/M-Pesa.png" alt="M-Pesa Logo" class="mpesa-logo">
                     <div class="mpesa-header">
-                        <h4>Pay with M-Pesa, Airtel, or Card</h4>
-                        <p>Enter your details to proceed.</p>
+                        <h4 id="paymentHowTitle">How it Works</h4>
                     </div>
                     <form class="payment-form">
                         <div class="form-group">
@@ -437,7 +438,6 @@
                         <button type="submit" class="btn btn-primary btn-full" onclick="processPayment()">Pay Now</button>
                     </form>
                     <div class="payment-flow">
-                        <h4>How it Works</h4>
                         <div class="flow-step">
                             <span class="step-number">1</span>
                             <span>Enter phone number and amount</span>
@@ -459,14 +459,14 @@
     <div id="ocrPreviewModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>OCR Preview</h3>
+                <h3 id="ocrPreviewTitle">OCR Preview</h3>
+                <h4 id="ocrExtractedTitle">Extracted Text</h4>
                 <button class="close-btn" onclick="closeModal('ocrPreviewModal')">×</button>
             </div>
             <div class="modal-body">
                 <div class="ocr-preview">
-                    <h4>Extracted Text</h4>
                     <textarea id="ocrText" class="form-input" rows="5"></textarea>
-                    <button class="btn btn-primary btn-full" onclick="submitOcrText()">Send to AI</button>
+                    <button id="ocrSendBtn" class="btn btn-primary btn-full" onclick="submitOcrText()">Send to AI</button>
                 </div>
             </div>
         </div>
@@ -475,13 +475,13 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Login to StudyBuddy</h3>
+                <h3 id="loginModalTitle">Login to StudyBuddy</h3>
+                <label id="loginPhoneLabel" for="loginPhone">Phone Number</label>
                 <button class="close-btn" onclick="closeModal('loginModal')">×</button>
             </div>
             <div class="modal-body">
                 <form class="login-form">
                     <div class="form-group">
-                        <label for="loginPhone">Phone Number</label>
                         <input type="tel" id="loginPhone" class="form-input" placeholder="e.g., 0712345678">
                     </div>
                     <button type="submit" id="sendOtpBtn" class="btn btn-primary btn-full" onclick="processLogin()">Send OTP</button>
@@ -493,13 +493,13 @@
     <div id="otpModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Enter OTP</h3>
+                <h3 id="otpModalTitle">Enter OTP</h3>
+                <label id="otpInputLabel" for="otpInput">OTP Code</label>
                 <button class="close-btn" onclick="closeModal('otpModal')">×</button>
             </div>
             <div class="modal-body">
                 <form class="otp-form">
                     <div class="form-group">
-                        <label for="otpInput">OTP Code</label>
                         <input type="text" id="otpInput" class="form-input" placeholder="Enter 6-digit OTP">
                     </div>
                     <button type="submit" class="btn btn-primary btn-full" onclick="verifyOTP()">Verify</button>
@@ -511,7 +511,9 @@
     <div id="investorModal" class="modal investor-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Investor Portal</h3>
+                <h3 id="investorModalTitle">Investor Portal</h3>
+                <h4 id="investorMarketTitle">Market Opportunity</h4>
+                <h4 id="investorFundingTitle">Funding Needs</h4>
                 <button class="close-btn" onclick="closeModal('investorModal')">×</button>
             </div>
             <div class="modal-body">
@@ -569,8 +571,8 @@
                         </div>
                     </div>
                     <div class="cta-section">
-                        <a href="#" class="btn btn-primary btn-large" onclick="downloadPitchDeck()">Download Pitch Deck</a>
-                        <a href="#" class="btn btn-secondary btn-large" onclick="scheduleDemo()">Schedule a Demo</a>
+                        <button id="investorDownloadBtn" class="btn btn-primary btn-large" onclick="downloadPitchDeck()">Download Pitch Deck</button>
+                        <button id="investorScheduleBtn" class="btn btn-secondary btn-large" onclick="scheduleDemo()">Schedule a Demo</button>
                     </div>
                 </div>
             </div>
@@ -580,12 +582,12 @@
     <div id="canvasPanel" class="modal canvas-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Analytics Dashboard</h3>
+                <h3 id="analyticsTitle">Analytics Dashboard</h3>
                 <button class="close-btn" onclick="closeCanvasPanel()">×</button>
             </div>
             <div class="modal-body">
                 <canvas id="analyticsChart"></canvas>
-                <button class="btn btn-primary btn-full" onclick="downloadChart()">Download Chart</button>
+                <button id="analyticsDownloadBtn" class="btn btn-primary btn-full" onclick="downloadChart()">Download Chart</button>
             </div>
         </div>
     </div>
@@ -617,7 +619,5 @@
         }
       });
     </script>
-</body>
-</html>
 </body>
 </html>

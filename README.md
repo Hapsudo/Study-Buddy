@@ -59,23 +59,9 @@ With **photo recognition**, **voice-based queries**, **Swahili/English multiling
 
 ```bash
 git clone https://github.com/yourusername/studybuddy-ai-pro.git
-cd studybuddy-ai-pro
-npm install
-📄 Environment Variables
-Create a .env file:
 
-env
-Copy
-Edit
-AI_API_KEY=your_openai_or_grok_key
-MPESA_API_KEY=your_mpesa_sandbox_key
-🔄 Run Locally
-bash
-Copy
-Edit
-npm install -g http-server
-http-server . -p 8000
-Visit: https://study-buddy-aipro.netlify.app/#
+
+Visit: http://localhost:8000
 
 📌 Usage
 🏠 Homepage
@@ -206,7 +192,7 @@ See LICENSE for details.
 
 🌐 Website: studybuddy.ai
 
-💡 Built with ❤️ by Catherine Abugah – proudly supporting Kenyan learners with smart, accessible, and locally-relevant education solutions.
+💡 Built with ❤️ by Catherine Abugah – proudly supporting Kenyan learners with smart, accessible, and locally-relevant education solutions with intention to scale within African boundaries.
 
 
 ✅ You can now **copy the entire block** above and paste it into your project’s `README.md` file.  

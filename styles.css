@@ -555,10 +555,13 @@ body.theme-dark .prompt-btn {
     flex-wrap: wrap;
 }
 
+.input-method-btn, .input-method-btn .input-method-icon, .input-method-btn span {
+    color: #111 !important;
+}
+
 .input-method-btn {
     min-width: 120px;
     flex: 1 1 auto;
-    color: #e2e8f0;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 0.5rem;
@@ -569,7 +572,6 @@ body.theme-dark .prompt-btn {
 
 body.theme-dark .input-method-btn {
     background: rgba(255, 255, 255, 0.2);
-    color: #e2e8f0;
 }
 
 .input-method-btn:hover {
