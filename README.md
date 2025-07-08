@@ -209,5 +209,4 @@ See LICENSE for details.
 💡 Built with ❤️ by Catherine Abugah – proudly supporting Kenyan learners with smart, accessible, and locally-relevant education solutions.
 
 
-✅ You can now **copy the entire block** above and paste it into your project’s `README.md` file.  
-Let me know if you'd like it zipped, converted to a PDF, or uploaded to GitHub for you!
+
